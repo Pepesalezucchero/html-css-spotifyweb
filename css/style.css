@@ -1,0 +1,182 @@
+/*stili generali*/
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+:root {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 14px;
+}
+
+a {
+    text-decoration: none;
+    color: #a3a3a3;
+}
+
+a:hover {
+    color: #ffff;
+}
+
+/*layout pagina*/
+.upper-bar {
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    width: 100%;
+    height: 70px;
+    background-color: rgba(0, 0, 0, 0.205);
+    position: fixed;
+    z-index: 400;
+}
+
+.container-wrapper {
+    display: flex;
+    height: calc(100vh - 100px);
+    background-color: blue;
+}
+
+.main-content {
+    background-color: aqua;
+    flex-grow: 1 ;
+    height: 100%;
+    overflow-y: scroll;
+}
+
+.side-bar {
+    width: 200px;
+    height: 100%;
+    background-color: #000000;
+    position: relative;
+    z-index: 500;
+}
+
+.controller-bar {
+    height: 100px;
+    background-color: grey;
+}
+
+/*upper bar*/
+.upper-bar a {
+    font-size: 12px;
+    color: white;
+    border: 1px solid white;
+    border-radius: 30px;
+    padding: 10px 20px;
+    margin-right: 25px;
+}
+
+.upper-bar a:hover {
+    font-size: 14px;
+    padding: 12px 24px;
+    margin-right: 10px;
+}
+
+/*side bar*/
+
+.side-bar .container {
+    height: 50%;
+    display: flex;
+    flex-direction: column;
+}
+
+.side-bar img, .side-bar .sx-view img{
+    width: 30px;
+    vertical-align: middle;
+}
+
+.side-bar .standard-logo img {
+    width: 150px;
+    margin: 8px 0 20px;
+}
+
+.side-bar a {
+    margin: 6px 0;
+    padding-left: 20px;
+}
+
+.side-bar .sx-view {
+    display: none;
+}
+
+#side-nav-home {
+    border-left: 4px solid #99e229;
+    padding-left: 16px;
+    color: #ffff;
+}
+
+.side-bar h4 {
+    color: #ffff;
+    padding-left: 20px;
+    margin: 10px 0 15px;
+}
+
+.side-bar i {
+    font-size: 40px;
+    vertical-align: middle;
+}
+
+.side-nav-overflow {
+    display: flex;
+    flex-direction: column;
+    overflow-y: scroll;
+}
+
+.side-nav-overflow a {
+    margin-top: 15px;
+}
+
+.container-down {
+    height: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+}
+
+@media all and (max-width: 575px) {
+
+    .side-bar {
+        width: 60px;
+    }
+
+    .side-bar .container, .side-bar .container-down {
+        width: 50%;
+        margin: 0 auto;
+    }
+
+    .side-bar a {
+        padding-left: 0;
+    }
+
+    .side-bar .sx-view {
+        display: inline;
+    }
+
+    .side-bar .standard-logo {
+        display: none;
+    }
+
+    .side-bar a {
+        display: none;
+    }
+
+    .side-bar .sx-none {
+        display: none;
+    }
+
+    .container-down {
+        align-items: center;
+    }
+
+    .container-down .down-size, .container-down .down-size img {
+        width: 15px;
+    }
+
+
+}
+
+
+
+/*main-content*/
